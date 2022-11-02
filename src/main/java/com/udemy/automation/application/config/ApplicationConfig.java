@@ -11,9 +11,7 @@ import org.springframework.context.annotation.PropertySource;
 @Configuration
 @PropertySource("classpath:application.properties")
 public class ApplicationConfig {
-    @Getter
-    @Value("https://www.google.com/")
-    private String urlGoogle;
+
 
     @Getter
     @Value("${app.url.moodle}")
@@ -26,34 +24,5 @@ public class ApplicationConfig {
     @Getter
     @Value("${app.password.moodle}")
     private String passwordMoodle;
-
-    @Getter
-    @Value("${app.url.calculator}")
-    private String urlCalculator;
-
-    @Getter
-    @Value("10")
-    private String firstValue;
-
-    @Getter
-    @Value("5")
-    private String secondValue;
-
-    @Getter
-    @Value("${app.url.pos}")
-    private String urlPos;
-
-    @Getter
-    @Value("${user.pos}")
-    private String userPos;
-
-    @Getter
-    @Value("${password.pos}")
-    private String passwordPos;
-
-
-    public  String getUrlGoogle(){
-        return urlGoogle;
-    }
 
 }
